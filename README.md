@@ -99,15 +99,6 @@ The OKC (Operation Knowledge Chain) structure consists of six elements:
 | **Verification Indices** | Defines post-action monitoring variables and recovery criteria |
 | **Safety Notes** | Specifies conditions for stopping, slowing down, or escalating |
 
-### Raw Materials
-
-The `raw_materials/` directory contains:
-
-- `scenarios.json`: Three representative abnormal operation scenarios
-- `reference_answers.json`: Expert-validated reference answers with safety constraints
-- `kg_evidence.json`: Knowledge graph entities, relations, and reasoning paths
-- `scoring_rubric.json`: Evaluation criteria and scoring scale
-
 ### Usage
 
 #### Quick Start
@@ -217,15 +208,6 @@ OKC（操作知识链）结构由六个元素组成：
 | **Operation Suggestions（操作）** | 规定可执行的操作步骤 |
 | **Verification Indices（验证）** | 定义操作后的监控变量和恢复标准 |
 | **Safety Notes（风险边界）** | 规定应停止、放缓或升级处置的条件 |
-
-### 原始材料
-
-`raw_materials/` 目录包含：
-
-- `scenarios.json`：三个代表性异常操作场景
-- `reference_answers.json`：专家验证的参考答案（含安全约束）
-- `kg_evidence.json`：知识图谱实体、关系和推理路径
-- `scoring_rubric.json`：评估标准和评分量表
 
 ### 使用方法
 
