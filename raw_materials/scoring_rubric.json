@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "root_cause_accuracy": {
+      "weight": 20,
+      "description": "根因识别准确性"
+    },
+    "action_rationality": {
+      "weight": 15,
+      "description": "操作步骤合理性"
+    },
+    "executability": {
+      "weight": 15,
+      "description": "可执行性"
+    },
+    "monitoring_completeness": {
+      "weight": 15,
+      "description": "监测闭环完整性"
+    },
+    "safety": {
+      "weight": 20,
+      "description": "安全性"
+    },
+    "evidence_traceability": {
+      "weight": 10,
+      "description": "证据可追溯性"
+    },
+    "data_gap_identification": {
+      "weight": 5,
+      "description": "数据缺口识别"
+    }
+  },
+  "scale": {
+    "excellent": 100,
+    "good": 80,
+    "fair": 60,
+    "poor": 40,
+    "very_poor": 20
+  }
+}

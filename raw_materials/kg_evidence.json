@@ -1,0 +1,56 @@
+{
+  "scenario_1": {
+    "entities": [
+      {"id": "e1", "type": "设备", "name": "空压机"},
+      {"id": "e2", "type": "设备", "name": "空分装置"},
+      {"id": "e3", "type": "参数", "name": "电流"},
+      {"id": "e4", "type": "参数", "name": "出口压力"}
+    ],
+    "relations": [
+      {"source": "e1", "target": "e2", "type": "属于"},
+      {"source": "e1", "target": "e3", "type": "监控"},
+      {"source": "e1", "target": "e4", "type": "产生"}
+    ],
+    "paths": [
+      ["e1", "e3", "异常"],
+      ["e1", "e4", "异常"],
+      ["e1", "e2", "影响"]
+    ]
+  },
+  "scenario_2": {
+    "entities": [
+      {"id": "e1", "type": "设备", "name": "冷箱"},
+      {"id": "e2", "type": "参数", "name": "压力"},
+      {"id": "e3", "type": "故障", "name": "泄漏"},
+      {"id": "e4", "type": "故障", "name": "堵塞"}
+    ],
+    "relations": [
+      {"source": "e1", "target": "e2", "type": "监控"},
+      {"source": "e2", "target": "e3", "type": "可能导致"},
+      {"source": "e2", "target": "e4", "type": "可能导致"}
+    ],
+    "paths": [
+      ["e1", "e2", "异常"],
+      ["e2", "e3", "关联"],
+      ["e2", "e4", "关联"]
+    ]
+  },
+  "scenario_3": {
+    "entities": [
+      {"id": "e1", "type": "设备", "name": "液氮泵"},
+      {"id": "e2", "type": "参数", "name": "流量"},
+      {"id": "e3", "type": "参数", "name": "电机温度"},
+      {"id": "e4", "type": "现象", "name": "异常声音"}
+    ],
+    "relations": [
+      {"source": "e1", "target": "e2", "type": "产生"},
+      {"source": "e1", "target": "e3", "type": "监控"},
+      {"source": "e1", "target": "e4", "type": "表现"}
+    ],
+    "paths": [
+      ["e1", "e4", "异常"],
+      ["e1", "e2", "异常"],
+      ["e1", "e3", "异常"]
+    ]
+  }
+}
